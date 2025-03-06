@@ -11,13 +11,16 @@
  "author": "Sedric Ouambo",
  "license": "UNLICENSED",
  "dependencies": {
+  "@prisma/client": "^6.3.1",
   "compression": "^1.7.5",
   "cors": "^2.8.5",
   "dotenv": "^16.4.7",
   "express": "^4.21.2",
+  "express-handlebars": "^8.0.1",
   "helmet": "^8.0.0"
  },
  "devDependencies": {
-  "nodemon": "^3.1.9"
+  "nodemon": "^3.1.9",
+  "prisma": "^6.3.1"
  }
 }

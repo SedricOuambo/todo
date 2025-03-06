@@ -1,0 +1,24 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{titre}}</title>
+
+        {{#each styles}}
+            <link rel="stylesheet" href={{this}} />
+        {{/each}}
+
+        {{#each scripts}}
+            <script type="module" src={{this}}></script>
+        {{/each}}
+    </head>
+    <body>
+        <header>TODO</header>
+        <a href="/">home</a>
+        <a href="/documents">documents</a>
+        <main>
+            {{{body}}}
+        </main>
+        <footer>&copy;Sedric Ouambo</footer>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<h1>Liste des tâches</h1>
+<div id="container">
+    <form id="todo-form">
+        <input
+            type="text"
+            id="todo-input"
+            placeholder="Ajouter une nouvelle tâche"
+        />
+        <button type="submit">Ajouter</button>
+    </form>
+    <ul id="todo-list">
+        <template id="todo-template">
+            <li>
+                <input type="checkbox" />
+                <span class="description"></span>
+            </li>
+        </template>
+
+        {{#each todos}}
+            <li id="{{this.id}}">
+                <input type="checkbox" 
+                {{#if this.est_faite}}
+                    checked
+                {{/if}}
+                />
+                <span class="description">{{this.description}}</span>
+            </li>
+        {{/each}}
+
+    </ul>
+    <section class="categories">
+        {{>todo}}
+        <section>EN COURS</section>
+        {{>review}}
+        <section>FAIT</section>
+    </section>
+</div>
