@@ -14,12 +14,6 @@ router.get("/", async (request, response) => {
     });
 });
 
-<<<<<<< HEAD
-console.log("hello")
-=======
-console.log('test')
->>>>>>> a3274032ba44144076ffa9a0211fac8c762e7c18
-
 router.get("/documents", (request, response) => {
     response.render("documents", {
         titre: "Documents",
