@@ -14,6 +14,8 @@ router.get("/", async (request, response) => {
     });
 });
 
+console.log("hello")
+
 router.get("/documents", (request, response) => {
     response.render("documents", {
         titre: "Documents",
