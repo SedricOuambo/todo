@@ -15,7 +15,19 @@
     <body>
         <header>TODO</header>
         <a href="/">home</a>
-        <a href="/documents">documents</a>
+
+        {{#if user}}
+            <a href="/documents">documents</a>
+
+            <form method="post" action="/deconnexion">
+                <input type="submit" value="Deconnexion" />
+            </form>
+        {{/if}}
+
+        {{#unless user}}
+            <a href="/connexion">connexion</a>
+        {{/unless}}
+
         <main>
             {{{body}}}
         </main>

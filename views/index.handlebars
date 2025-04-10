@@ -1,13 +1,17 @@
 <h1>Liste des tâches</h1>
 <div id="container">
-    <form id="todo-form">
+    <form id="todo-form" novalidate>
         <input
             type="text"
             id="todo-input"
             placeholder="Ajouter une nouvelle tâche"
+            required
+            minlength="5"
+            maxlength="50"
         />
         <button type="submit">Ajouter</button>
     </form>
+    <div id="error-input"></div>
     <ul id="todo-list">
         <template id="todo-template">
             <li>

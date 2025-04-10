@@ -1,3 +1,4 @@
+import { validate } from "./validation.js";
 // Recupuration des elements du DOM
 const todoForm = document.getElementById("todo-form");
 const todoInput = document.getElementById("todo-input");
@@ -72,7 +73,8 @@ const getTodos = async () => {
 
 //Ajouter event listener sur le formulaire
 todoForm.addEventListener("submit", (event) => {
-    addTodoToServer(event);
+    event.preventDefault();
+    if (validate()) addTodoToServer(event);
 });
 
 //Permet d'ajouter un event listener sur chaque checkbox

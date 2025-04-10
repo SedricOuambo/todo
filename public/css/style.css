@@ -59,3 +59,8 @@ body {
     justify-content: center;
     gap: 3rem;
 }
+
+#error-input {
+    color: red;
+    font-size: 0.8rem;
+}
